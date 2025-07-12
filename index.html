@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoya & Me 💖 Our Love Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      color: #d63384;
+      scroll-behavior: smooth;
+    }
+
+    .cover {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffb6c1, #ffe6f0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .cover h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      color: #b30059;
+      margin-bottom: 10px;
+    }
+
+    .cover p {
+      font-size: 1.2em;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .cover img.corner {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+
+    .start-button, .reveal-button {
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .start-button:hover, .reveal-button:hover {
+      background-color: #ff3385;
+    }
+
+    .memory {
+      display: none;
+      opacity: 0;
+      padding: 60px 5%;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .memory.fade-in {
+      animation: fadeIn 1s forwards;
+      display: flex;
+    }
+
+    .memory img {
+      flex: 1 1 300px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .memory .text-box {
+      flex: 1 1 300px;
+      max-width: 600px;
+    }
+
+    .caption {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.2em;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      font-size: 1.1em;
+      color: #b30059;
+    }
+
+    .memory.centered {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .memory.reverse {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .memory, .memory.reverse {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .memory img {
+        max-height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cover">
+    <h1>For Zoya</h1>
+    <p>Here's a little website I made to revisit our memories and show my love for you, I love you so much</p>
+    <button class="start-button" onclick="revealMemory(0)">Click to Begin</button>
+    <img src="Zoya1.jpg" class="corner top-left" alt="Zoya">
+<img src="Zoya2.jpg" class="corner top-right" alt="Zoya">
+<img src="Zoya3.jpg" class="corner bottom-left" alt="Zoya">
+<img src="Zoya4.jpg" class="corner bottom-right" alt="Zoya">
+  </div>
+
+  <div id="timeline">
+    <!-- 8 Memory Blocks -->
+    <div class="memory" id="memory-0">
+      <img src="DateOne.jpg.jpeg" alt="First date">
+      <div class="text-box">
+        <div class="caption">Our First Date </div>
+        <p class="text">Our first date. I still remember how nervous I was, I was so afraid that you wouldnt like me, or that i'd mess something up and give you the ick, but everything was more than okay, I had such a fun time and I absolutely loved spending time with you. You know, it didn't help the fact that I was already nervous when you walked out of that gate looking the way you did. I was honestly going to pass out, my vision tunneled and the only thought in my big head was "Pretty", you looked even better than any picture you'd ever sent me and it made my heart rate climb quite high. This is definitely for me, our most memorable date because it's where we shared our first kiss, our first hand holding, our first hug, our first everything. My first impression of my person was amazing and that was when i realized that you were really all i'd ever wanted and needed. From that point on i'd really properly decided that I was gonna marry you Zoya</p>
+        <button class="reveal-button" onclick="revealMemory(1)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory reverse" id="memory-1">
+      <img src="Date2.jpg" alt="Beach day">
+      <div class="text-box">
+        <div class="caption">Haircut Car Date</div>
+        <p class="text">I still remember this like it was yesterday, but it was really more than a month ago. It had been more than a month since I had last saw you and I was brimming with excitement, my heart was gonna implode, I was still as nervous as I was on the first date - after all it was my second time seeing you - but something inside me told me it'd be okay, and it was more than okay. I loved spending quality time with you baby, just us and no one else. I loved staring into your eyes and holding you after it had been so long without you. You really are my other half baby, the relief that washed over me when I hugged you was the greatest feeling ever, and I always think to myself how lucky I am that I have you who makes me feel this way.</p>
+        <button class="reveal-button" onclick="revealMemory(2)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory centered" id="memory-2">
+      <img src="Date3.jpg" alt="Movie night">
+      <div class="text-box">
+        <div class="caption">Prom Day Date</div>
+        <p class="text">I loved this day a lot because it made me realize how nothing else can compare to the amount of joy I and peace I feel when I spend time with you baby. I had been looking forward to prom since the beginning of year 11, literally for almost 2 years I thought about how fun it would be, and on that same day when I got to saw you, leaving you to go to prom seemed like dropping an iphone 16 to go and buy a techno phone. The whole time at prom all I wished was to sit in that car with you again and talk and kiss. I really yearned for you that day especially not knowing when I would see you again. When my social battery died the only thought in my head was that I needed my Zoya.</p>
+        <button class="reveal-button" onclick="revealMemory(3)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory" id="memory-3">
+      <img src="Date4.jpeg" alt="Coffee date">
+      <div class="text-box">
+        <div class="caption"> Movie Date</div>
+        <p class="text">This was the second time we actually went out for a date, I was ecstatic being able to go out with you again. At this point I finally felt like our relationship was real (Not that it wasnt before of course) and that I could come and see you when I pleased. I had so much fun and this is where we cuddled for the first time, when you layed on my chest and all I could feel was you moving up and down with the rythm of your breathing, I felt a sense of peace and security that nothing else in the world could give me. As each date went by I fell more and more in love with you, we got more and more comfortable with each other and I loved every second of it.</p>
+        <button class="reveal-button" onclick="revealMemory(4)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory reverse" id="memory-4">
+      <img src="Date5.jpg" alt="Picnic">
+      <div class="text-box">
+        <div class="caption">Anniversary Oak Date</div>
+        <p class="text">This was a very important date, it was our four month Anniversary, our first one where we spent it together and not away from each other behind a phone screen, I wanted to make sure everything was perfect, I spent so long indecisively picking a bouqet for you and I just knew it had to be big and nice because you deserve so many flowers, if I could I would pick every flower in the world and make you a bouqet out of them to show how much I love you. I loved this date also because of the hug we shared in the car, in that moment it felt like time had stopped and it was just me and you in the world, nothing else mattered at all. I really loved sharing food with you on this date, sitting and enjoying each others company, and absolutely fighting for our lives to not kiss each other in public. I couldn't even hold myself back the moment I got into that washroom alone with you, i'm not usually an impatient man but with you I can never wait. Then we went to chandarana and I made you wear that tiara to take a photo, I know I was laughing pretty hard but in that moment I didn't notice the tiara, I was just so dumbfounded by how gorgeous a person can be, you looked so beautiful and perfect it took my breath away, I will never understand how you manage to look so profoundly stunning all the time.</p>
+        <button class="reveal-button" onclick="revealMemory(5)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory centered" id="memory-5">
+      <img src="Date6.jpeg" alt="Zoo date">
+      <div class="text-box">
+        <div class="caption">City Mall Date</div>
+        <p class="text">Although we didn't get to spend so much time together on this day, it made me realize that I would do anything in my power to come see you no matter how long I get to spend with you, you make every single second worth it baby. I loved walking around city mall with you while you stared at the makeup and plushies, and I stared at you (And your bunda slightly). You looked so incredibly pretty and I couldn't take my eyes off you for even a second, I remember we made our first tiktok together here in the car, and shared ice cream. It was short but sweet, and at around this point I was finally getting used to going out with you, It had become almost routine for me but I knew it would never be "Normal", because no moment I spend with you is normal, it's special and it will always be special because you are my special girl.</p>
+        <button class="reveal-button" onclick="revealMemory(6)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory" id="memory-6">
+      <img src="Date7.jpg" alt="Rain walk">
+      <div class="text-box">
+        <div class="caption">Yul's Date</div>
+        <p class="text">We talked about going on this date for so incredibly long, although it was your idea yes. I was really happy when I got to spend the entire day with you to make up for the little time on our last date, this was probably the date that I had the most fun on, I got to see you looking absolutely gorgeous in that blue dress, the way you looked is still engraved into my brain I think of it daily, I can't even imagine anyone else holding a candle to how beautiful you are, inside and out. I loved walking on the beach with you while we shared ice cream, and taking you for a ride on my back too, we spent 5 hours together but it only felt like an hour or two, being with you speeds up time so quickly and it's devastating sometimes because I always yearn for my other half.</p>
+        <button class="reveal-button" onclick="revealMemory(7)">Next memory ↓</button>
+      </div>
+    </div>
+
+    <div class="memory reverse" id="memory-7">
+      <img src="Date8.jpg" alt="Anniversary">
+      <div class="text-box">
+        <div class="caption">CJ's Date</div>
+        <p class="text">Our most recent date, I had missed you so much since we last went to Yul's and I was so excited to finally see you again after waiting for what felt like decades. I love eating food with you and just sitting and talking, even if we arent talking and we're just silent. This was an important day because I realized how much I missed you, after we had been arguing the days before because I was busy with my family, it was really nice to switch up completely and enjoy each others presence again, no arguments, no fights, just me and my one love. You cried in front of me for the first time on this day and it melted my heart, I couldn't bear to see your face with tears in your eyes and the fact that you cried those tears for me was dumbfounding me. I am so incredibly lucky to have you jaan, I know that i've been telling you you'll get this website for god knows long, and I just want to apologize for that sincerely. I know it's not much but I hope I can caputure atleast some of how much I love you on this. I love you so much Zoya, every passing second I spend with you means the entire world to me, happy Anniversary baby. P.S Click the button below for a little extra feature</p>
+        <p class="text" style="margin-top: 20px;">Forever yours, jaan. ❤️</p>
+        <div style="text-align: center; margin-top: 30px;">
+  <a href="count.html">
+    <button class="start-button">See how long we've been in love ⏳</button>
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function revealMemory(index) {
+      const memory = document.getElementById(`memory-${index}`);
+      if (memory) {
+        memory.style.display = 'flex';
+        setTimeout(() => {
+          memory.classList.add('fade-in');
+          memory.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  </script>
+
+</body>
+</html>
